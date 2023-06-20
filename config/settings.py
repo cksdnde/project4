@@ -152,3 +152,4 @@ LOGIN_REDIRECT_URL = '/'
 # 로그아웃시 이동하는 URL
 LOGOUT_REDIRECT_URL = '/'
 
+CSRF_TRUSTED_ORIGINS = ["https://port-0-project4-dihik2mlj435m8i.sel4.cloudtype.app/",]
