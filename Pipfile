@@ -4,8 +4,18 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pipenv = "*"
-django = "*"
+asgiref= "==3.7.2"
+certifi="==2023.5.7"
+distlib="==0.3.6"
+Django="==4.2.2"
+filelock="==3.12.2"
+pipenv="==2023.6.18"
+platformdirs="==3.6.0"
+sqlparse="==0.4.4"
+tzdata="==2023.3"
+virtualenv="==20.23.1"
+virtualenv-clone="==0.5.7"
+
 
 [dev-packages]
 

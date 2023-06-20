@@ -8,9 +8,6 @@ from ..models import Question, Answer
 
 @login_required(login_url='common:login')
 def answer_create(request, question_id):
-    """
-    pybo 답변등록
-    """
     question = get_object_or_404(Question, pk=question_id)
     if request.method == "POST":
         form = AnswerForm(request.POST)
@@ -20,11 +17,11 @@ def answer_create(request, question_id):
             answer.create_date = timezone.now()
             answer.question = question
             answer.save()
-
             return redirect('{}#answer_{}'.format(
                 resolve_url('pybo:detail', question_id=question.id), answer.id))
+
     else:
-        form = AnswerForm()
+         form = AnswerForm()
     context = {'question': question, 'form': form}
     return render(request, 'pybo/question_detail.html', context)
 
